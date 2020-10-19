@@ -18,23 +18,23 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const CustomerListView = () => {
+const OrderListView = () => {
   const classes = useStyles();
-  const [customers] = useState(data);
+  const [orders] = useState(data);
 
   return (
     <Page
       className={classes.root}
-      title="客户"
+      title="订单管理"
     >
       <Container maxWidth={false}>
         <Toolbar />
         <Box mt={3}>
-          <Results customers={customers} />
+          <Results orders={orders} />
         </Box>
       </Container>
     </Page>
   );
 };
 
-export default CustomerListView;
+export default OrderListView;

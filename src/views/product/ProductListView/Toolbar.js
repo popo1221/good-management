@@ -35,17 +35,17 @@ const Toolbar = ({ className, ...rest }) => {
         display="flex"
         justifyContent="flex-end"
       >
-        <Button className={classes.importButton}>
+        {/* <Button className={classes.importButton}>
           Import
-        </Button>
+        </Button> */}
         <Button className={classes.exportButton}>
-          Export
+          导出
         </Button>
         <Button
           color="primary"
           variant="contained"
         >
-          Add product
+          增加商品
         </Button>
       </Box>
       <Box mt={3}>
@@ -66,7 +66,7 @@ const Toolbar = ({ className, ...rest }) => {
                     </InputAdornment>
                   )
                 }}
-                placeholder="Search product"
+                placeholder="搜索商品"
                 variant="outlined"
               />
             </Box>

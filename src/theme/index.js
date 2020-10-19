@@ -1,4 +1,5 @@
 import { createMuiTheme, colors } from '@material-ui/core';
+import { zhCN } from '@material-ui/core/locale';
 import shadows from './shadows';
 import typography from './typography';
 
@@ -22,6 +23,6 @@ const theme = createMuiTheme({
   },
   shadows,
   typography
-});
+}, zhCN);
 
 export default theme;
