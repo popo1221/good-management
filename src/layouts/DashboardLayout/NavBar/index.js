@@ -56,16 +56,16 @@ const items = [
     icon: UserIcon,
     title: '账号'
   },
-  {
-    href: '/app/settings',
-    icon: SettingsIcon,
-    title: '设置'
-  },
-  {
-    href: '/login',
-    icon: LockIcon,
-    title: '登录'
-  },
+  // {
+  //   href: '/app/settings',
+  //   icon: SettingsIcon,
+  //   title: '设置'
+  // },
+  // {
+  //   href: '/login',
+  //   icon: LockIcon,
+  //   title: '登录'
+  // },
   // {
   //   href: '/register',
   //   icon: UserPlusIcon,
