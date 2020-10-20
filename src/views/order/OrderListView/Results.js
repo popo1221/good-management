@@ -94,11 +94,14 @@ const Results = ({ className, orders, ...rest }) => {
                     onChange={handleSelectAll}
                   />
                 </TableCell>
-                <TableCell>姓名</TableCell>
-                <TableCell>Email</TableCell>
-                <TableCell>Location</TableCell>
-                <TableCell>Phone</TableCell>
-                <TableCell>Registration date</TableCell>
+                <TableCell>订单编号</TableCell>
+                <TableCell>订单类型</TableCell>
+                <TableCell>商品</TableCell>
+                <TableCell>顾客</TableCell>
+                <TableCell>已收金额</TableCell>
+                <TableCell>购买时间</TableCell>
+                <TableCell>状态</TableCell>
+                <TableCell>备注</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -117,24 +120,25 @@ const Results = ({ className, orders, ...rest }) => {
                   </TableCell>
                   <TableCell>
                     <Box alignItems="center" display="flex">
-                      <Avatar
-                        className={classes.avatar}
-                        src={order.avatarUrl}
-                      >
-                        {getInitials(order.name)}
-                      </Avatar>
-                      <Typography color="textPrimary" variant="body1">
-                        {order.name}
-                      </Typography>
+                      {order.id}
                     </Box>
                   </TableCell>
-                  <TableCell>{order.email}</TableCell>
+                  <TableCell>{order.type}</TableCell>
                   <TableCell>
-                    {`${order.address.city}, ${order.address.state}, ${order.address.country}`}
+                    {order.type === '定制'
+                      ? order.productExtension
+                      : order.product.name}
                   </TableCell>
-                  <TableCell>{order.phone}</TableCell>
+                  <TableCell>{order.customer.name}</TableCell>
+                  <TableCell>{order.paidAmount}</TableCell>
                   <TableCell>
-                    {moment(order.createdAt).format('DD/MM/YYYY')}
+                    {moment(order.createdAt).format('DD/MM/YYYY HH:mm')}
+                  </TableCell>
+                  <TableCell>
+                    {order.status}
+                  </TableCell>
+                  <TableCell>
+                    {order.remark}
                   </TableCell>
                 </TableRow>
               ))}

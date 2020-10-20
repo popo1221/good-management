@@ -3,7 +3,7 @@
   "author": "DeviasIO",
   "licence": "MIT",
   "version": "1.0.0",
-  "private": false,
+  "private": true,
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build"
@@ -24,12 +24,15 @@
     ]
   },
   "dependencies": {
+    "@date-io/date-fns": "2.10.6",
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",
+    "@material-ui/pickers": "3.2.10",
     "@material-ui/styles": "^4.10.0",
     "chart.js": "^2.9.3",
     "clsx": "^1.1.1",
+    "date-fns": "2.16.1",
     "formik": "^2.1.5",
     "history": "^5.0.0",
     "lodash": "^4.17.19",
@@ -41,6 +44,7 @@
     "react-dom": "^16.13.1",
     "react-feather": "^2.0.8",
     "react-helmet": "^6.1.0",
+    "react-material-ui-form-validator": "2.0.9",
     "react-perfect-scrollbar": "^1.5.8",
     "react-router": "^6.0.0-beta.0",
     "react-router-dom": "^6.0.0-beta.0",
